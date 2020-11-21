@@ -27,6 +27,7 @@ const WanakanaInput = ({ component, value, to, onChange, ...props }) => {
   };
   
   useEffect(() => {
+      inputRef.current.value = updatedValue;
       setValue(translateValue(value, to))
   }, [value])
 
